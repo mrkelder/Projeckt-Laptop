@@ -1,0 +1,555 @@
+@font-face{    
+    font-family:"Montserrat"; 
+    src: url("../font/Montserrat-Medium.ttf");
+}
+body{    
+    background-color:#f5f5f5;    
+    margin:0;    
+    padding:0;  
+    font-family:"Montserrat" , monospace , sans-serif;
+}
+
+input{
+    margin: 0;
+    outline: none;
+}
+button{    
+    outline:none;    
+    background-color:white;    
+    font-size:1.1rem;    
+    font-family:"Montserrat" , monospace , sans-serif;  
+    border:none;
+    cursor: pointer;
+}
+
+b{
+    color: black;
+}
+p{    
+    font-family:"Montserrat" , monospace , sans-serif;   
+    text-decoration:none;    
+    color:grey;
+}
+
+
+header{    
+    position:absolute;
+}
+
+
+a{    
+    text-decoration:none;
+}
+
+
+footer{    
+    background:#141414; 
+    width: 100%;   
+    height:260px;    
+    box-sizing:border-box;    
+    padding-top:5px;    
+    padding:5px;
+    
+}
+
+
+span{    
+    color:#ACACAC;    
+    font-size:14px;
+}
+*::selection{
+    background: #6BEFFF;
+    color: white;
+}
+
+/*Выше идут просто теги и псевдоклыссы к ним*/
+
+.head{    
+    background-color:white;    
+    position:fixed;    
+    width:100%;    
+    height:50px;    
+    top:0px;
+    border:1px solid rgb(213, 213, 213);
+    z-index: 10;
+}
+/*Голова*/
+
+.logo{    
+    margin:5px;    
+    width:2.5em;
+}
+
+
+.btn_head{    
+    width:53px;    
+    height:51px;    
+    position:absolute;    
+    right:0;    
+    top:0;    
+    background:white;    
+    border:1px solid rgb(213, 213, 213);
+}
+
+
+.obl1{
+    position: relative;
+    height: 50px;
+    top: -50px;
+}
+
+
+.btn_head img{    
+    position:relative;    
+    top:50%;    
+    width:50%;    
+    transition:.3s;
+}
+
+.head_menu{    
+    position:fixed;    
+    top:52px;    
+    width:100%;
+    height: 0;
+}
+
+
+.head_menu a{    
+    display:block;    
+    margin-bottom:2px;
+    visibility: hidden;
+}
+
+
+.head_menu div{    
+    height:0;    
+    border:none;    
+    transition:height .3s;
+    visibility: hidden;
+}
+
+
+.head_menu p{    
+    left:-90px;    
+    position:relative;    
+    overflow:hidden;
+    visibility: hidden;
+    font-family:"Montserrat" , monospace , sans-serif;
+    font-weight: bolder; 
+}
+
+.about_b{    
+    color: black;
+}
+.home_blue{
+    color: black;
+}
+/*Меню , ссылка - поле для нажатия , 
+див - блок , и текст*/
+.btn_head:checked{
+    background-image: url(../image/trngl.png);
+}
+.btn_head:checked ~ .head_menu{
+    height: 50%;
+    left: 0;
+
+}
+.btn_head:checked ~ .head_menu div{    
+    height:50px;    
+    background-color:white;    
+    border:1px solid rgb(213, 213, 213);    
+    overflow:hidden;    
+    position:relative;
+    visibility: visible;
+}
+
+
+.btn_head:checked ~ .head_menu p{    
+    margin:0;    
+    padding:0;    
+    position:relative;    
+    top:15px;    
+    left:12px;
+    visibility: visible;
+}
+.btn_head:checked ~ .head_menu a{
+    visibility: visible;
+}
+
+/*******Функциональная часть меню*******/
+.main_txt{
+    margin-top:65px;
+}
+.main_txt h1{
+    color: black;
+    text-align: center;
+}
+.main_txt p{
+    text-align: center;
+    line-height: 28px;
+}
+main img{
+    width: 100%;
+    margin: 10px 0;
+}
+
+/*Сдесь заканчивается основная часть
+сайта , и начинается футер*/
+.fot1{    
+    width:180px;
+}
+
+
+.fot1 h5{    
+    color:white;    
+    margin:0;
+}
+
+
+.fot1 p{    
+    margin:0;    
+    margin-top:15px;    
+    color:#bcbcbc;    
+    font-size:.7rem;    
+    line-height:20px;
+}
+
+
+.fot2{    
+    margin-top:20px;    
+    width:150px;
+}
+
+
+.fot2 p{    
+    margin:0;    
+    color:#bcbcbc;    
+    font-size:.7rem;    
+    line-height:20px;
+}
+
+
+.fot3{    
+    margin-top:15px;    
+    margin-left:41px;       
+    width:260px;    
+    margin-bottom:0;
+}
+
+
+._fot1  , ._fot2  , ._fot3{    
+    display:inline-block;    
+    margin-left:15px;
+}
+
+
+._fot1 p , ._fot2 p , ._fot3 p{    
+    margin:0;    
+    color:#bcbcbc;    
+    font-size:.7rem;    
+    line-height:20px;
+}
+/************Маленькие устройства***********/
+@media(min-width: 425px){
+    .event1 , .event2{
+        width: 50%;
+        display: inline-block;
+    }
+    .event3 , .event4{
+        width: 50%;
+        display: inline-block;
+    }
+    .event5 , .event6{
+        width: 50%;
+        display: inline-block;
+    }
+    .event7 , .event8{
+        width: 50%;
+        display: inline-block;
+    }
+    .event9 , .event10{
+        width: 50%;
+        display: inline-block;
+    }
+    .event11 , .event12{
+        width: 50%;
+        display: inline-block;
+    }
+    footer{
+        height: 220px;
+    }
+    .fot1{
+        margin-top: 12px;
+    }
+    .fot2{
+       
+        margin-top: -40px;
+        margin-left: auto;    
+    }
+    .fot3{
+        margin: auto;
+        margin-top: 22px;
+    }
+    .fot3 p{
+        margin-left: 6px;
+    }
+}
+/*************Маленькие телефоны**************/
+@media (min-width: 768px){
+    .main_txt{
+        margin: auto;
+        margin-top: 85px;
+        width: 50%;
+    }
+    .main_txt p{
+        width: 100%;
+    }
+    .event1{
+        animation: anim1 2s;
+        width: 25%;
+        display: inline-block;
+    }
+    .event2{
+        animation: anim1 2s .2s;
+        width: 25%;
+        display: inline-block;
+    }
+    .event3{
+        animation: anim1 2s .3s;
+        width: 25%;
+        display: inline-block;
+    }
+    .event4{
+        animation: anim1 2s .4s;
+        width: 25%;
+        display: inline-block;
+    }
+    .event5{
+        animation: anim1 2s .5s;
+        width: 25%;
+        display: inline-block;
+    }
+    .event6{
+        animation: anim1 2s .6s;
+        width: 25%;
+        display: inline-block;
+    }
+    .event7{
+        animation: anim1 2s .7s;
+        width: 25%;
+        display: inline-block;
+    }
+    .event8{
+        animation: anim1 2s .8s;
+        width: 25%;
+        display: inline-block;
+    }
+    .event9{
+        animation: anim1 2s .9s;
+        width: 25%;
+        display: inline-block;
+    }
+    .event10{
+        animation: anim1 2s 1s;
+        width: 25%;
+        display: inline-block;
+    }
+    .event11{
+        animation: anim1 2s 1.1s;
+        width: 25%;
+        display: inline-block;
+    }
+    .event12{
+        animation: anim1 2s 1.2s;
+        width: 25%;
+        display: inline-block;
+    }
+        
+    @keyframes anim1{
+        from{
+            transform:scale(0);
+        }
+        to{
+            transform:scale(1);
+        }
+    }
+}
+/*****************Планшеты******************/
+@media (min-width: 1024px){
+    header{
+        position: static;
+    }
+    footer{
+        position: relative;
+    }
+    .head{
+        position: relative;
+        height: 75px;
+        border: none;
+    }
+    .logo {
+        margin-left: 81px;
+        margin-top: 15px;
+        width: 3em;
+    }
+    .btn_head{
+        visibility: hidden;
+    }
+    .obl1{
+        display: inline-block;
+        position: absolute;
+        right: 298px;
+        top: -24px;
+    }
+
+    .head_menu {
+        width: 270px;
+        height: 20px;
+        visibility: visible;
+        position: absolute;
+    }
+
+    .head_menu a{  
+        width: 50px;
+        height: 25px;  
+        visibility: visible;
+        display: inline-block;
+        margin-left: 20px;
+    }
+
+    .head_menu div{ 
+        width: 50px;
+        height: 25px; 
+        visibility: visible;
+    }
+    .home_blue{
+        color: #10c9c3;
+    }
+
+    .head_menu p{ 
+        width: 82px;
+        height: 25px;
+        visibility: visible;  
+        left: 0; 
+        margin: 0;
+        font-family:"Montserrat" , monospace , sans-serif; 
+    }
+    .photo{
+        margin: auto;
+        width: 75%;
+    }
+    .event1{
+        width: 24%;
+    }
+    .event2{
+        width: 24%;
+    }
+    .event3{
+        width: 24%;
+    }
+    .event4{
+        width: 24%;
+    }
+    .event5{
+        width: 24%;
+    }
+    .event6{
+        width: 24%;
+    }
+    .event7{
+        width: 24%;
+    }
+    .event8{
+        width: 24%;
+    }
+    .event9{
+        width: 24%;
+    }
+    .event10{
+        width: 24%;
+    }
+    .event11{
+        width: 24%;
+    }
+    .event12{
+        width: 24%;
+    }
+    .fot1{
+        margin-left: 80px;
+        margin-top: 51px;
+    }
+    .fot2{
+        margin-right: auto;
+    }
+    .fot3{
+        position: absolute;
+        right: 72px;
+        top: 40px;
+        width: 280px;
+    }
+    ._fot3{
+        margin-left: 35px;
+    }
+}
+@media (min-width: 1440px){
+    .obl1{
+        right: 348px;
+    }
+    .main_txt{
+        width: 35%;
+    }
+}
+/*****************Ноутбуки*******************/
+@media (min-width: 2560px){
+    .main_txt{
+        width: 25%;
+        line-height: 25px;
+    }
+    .main_txt h1{
+        font-size: 1.8rem;
+    }
+    .main_txt p{
+        font-size: 1.5rem;
+    }
+    .photo{
+        width: 60%;
+        padding: 10px 0;
+    }
+    .event1{
+        width: 23%;
+    }
+    .event2{
+        width: 23%;
+    }
+    .event3{
+        width: 23%;
+    }
+    .event4{
+        width: 23%;
+    }
+    .event5{
+        width: 23%;
+    }
+    .event6{
+        width: 23%;
+    }
+    .event7{
+        width: 23%;
+    }
+    .event8{
+        width: 23%;
+    }
+    .event9{
+        width: 23%;
+    }
+    .event10{
+        width: 23%;
+    }
+    .event11{
+        width: 23%;
+    }
+    .event12{
+        width: 23%;
+    }
+}
+/***************Большие мониторы**************/

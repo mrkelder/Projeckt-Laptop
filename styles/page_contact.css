@@ -1,0 +1,596 @@
+@font-face{    
+    font-family:"Montserrat"; 
+    src: url("../font/Montserrat-Medium.ttf");
+}
+
+
+body{    
+    background-color:#f5f5f5;    
+    margin:0;    
+    padding:0;    
+    font-family:"Montserrat" , monospace , sans-serif;
+}
+
+input{
+    margin: 0;
+    outline: none;
+}
+button{    
+    outline:none;    
+    background-color:white;    
+    font-size:1.1rem;    
+    font-family:"Montserrat" , monospace , sans-serif;  
+    border:none;
+    cursor: pointer;
+}
+
+b{
+    color: black;
+}
+p{    
+    font-family:"Montserrat" , monospace , sans-serif;   
+    text-decoration:none;    
+    color:grey;
+}
+
+
+header{    
+    position:absolute;
+}
+
+
+a{    
+    text-decoration:none;
+}
+
+
+input{    
+    outline:none;    
+    border:none;    
+    margin-bottom:4px;    
+    font-family:"Montserrat" , monospace , sans-serif;  
+    width:100%;    
+    height:50px;
+    text-indent:12px;
+}
+
+
+footer{    
+    background:#141414; 
+    width: 100%;   
+    height:260px;    
+    box-sizing:border-box;    
+    padding-top:5px;    
+    padding:5px;
+    
+}
+
+
+span{    
+    color:#ACACAC;    
+    font-size:14px;
+}
+
+
+textarea{    
+    height:100px;    
+    width:100%;    
+    font-family:"Montserrat" , monospace , sans-serif;   
+    resize:none;    
+    border:none;      
+    outline:none;
+    box-shadow: 0 6px 24px -4px rgba(0,0,0,.3);
+    text-indent:8px;
+    margin-bottom: 5px;  
+}
+
+
+input::placeholder{    
+    text-indent:12px;    
+    font-family:"Montserrat" , monospace , sans-serif;
+}
+
+
+textarea::placeholder{    
+    text-indent:8px;    
+    font-family:"Montserrat" , monospace , sans-serif;
+}
+*::selection{
+    background: #6BEFFF;
+    color: white;
+}
+
+/*Выше идут просто теги и псевдоклыссы к ним*/
+
+.head{    
+    background-color:white;    
+    position:fixed;    
+    width:100%;    
+    height:50px;    
+    top:0px;
+    border:1px solid rgb(213, 213, 213);
+    z-index: 10;
+}
+/*Голова*/
+
+.logo{    
+    margin:5px;    
+    width:2.5em;
+}
+
+
+.btn_head{    
+    width:53px;    
+    height:51px;    
+    position:absolute;    
+    right:0;    
+    top:0;    
+    background:white;    
+    border:1px solid rgb(213, 213, 213);
+}
+
+
+.obl1{
+    position: relative;
+    height: 50px;
+    top: -50px;
+}
+
+
+.btn_head img{    
+    position:relative;    
+    top:50%;    
+    width:50%;    
+    transition:.3s;
+}
+
+/*Кнопка и картинка в ней
+Вообще я хотел бы заменить
+button на checkbox*/
+.head_menu{    
+    position:fixed;    
+    top:52px;    
+    width:100%;
+    height: 0;
+}
+
+
+.head_menu a{    
+    display:block;    
+    margin-bottom:2px;
+    visibility: hidden;
+}
+
+
+.head_menu div{    
+    height:0;    
+    border:none;    
+    transition:height .3s;
+    visibility: hidden;
+}
+
+
+.head_menu p{    
+    left:-90px;    
+    position:relative;    
+    overflow:hidden;
+    visibility: hidden;
+    font-family:"Montserrat" , monospace , sans-serif;
+    font-weight: bolder;
+}
+
+.home_b , .about_b{
+    color: black;
+}
+.contact_blue{
+    color: black;
+}
+/*Меню , ссылка - поле для нажатия , 
+див - блок , и текст*/
+.btn_head:checked{
+    background-image: url(../image/trngl.png);
+}
+.btn_head:checked ~ .head_menu{
+    height: 50%;
+    left: 0;
+
+}
+.btn_head:checked ~ .head_menu div{    
+    height:50px;    
+    background-color:white;    
+    border:1px solid rgb(213, 213, 213);    
+    overflow:hidden;    
+    position:relative;
+    visibility: visible;
+}
+
+
+.btn_head:checked ~ .head_menu p{    
+    margin:0;    
+    padding:0;    
+    position:relative;    
+    top:15px;    
+    left:12px;
+    visibility: visible;
+}
+.btn_head:checked ~ .head_menu a{
+    visibility: visible;
+}
+
+/*******Функциональная часть меню*******/
+.CI{    
+    margin-top:56px;
+}
+
+.big_txt{
+    line-height: 32px;
+}
+.inp1{
+    -webkit-box-shadow: 0 -1px 24px -4px rgba(0,0,0,.3);
+    -o-box-shadow: 0 -1px 24px -4px rgba(0,0,0,.3);
+    -moz-box-shadow: 0 -1px 24px -4px rgba(0,0,0,.3);
+    -ms-box-shadow: 0 -1px 24px -4px rgba(0,0,0,.3);
+    box-shadow: 0 -1px 24px -4px rgba(0,0,0,.3);
+}
+.inp4 ~ div>button{       
+    width:150px;    
+    height:50px;  
+    font-size:13px;    
+    color:white;
+    position: absolute;
+    right: 0;
+    transition: .2s;
+    -webkit-box-shadow: 0 0 16px 0px rgb(16, 201, 195);
+    -o-box-shadow: 0 0 16px 0px rgb(16, 201, 195);
+    -moz-box-shadow: 0 0 16px 0px rgb(16, 201, 195);
+    -ms-box-shadow: 0 0 16px 0px rgb(16, 201, 195);
+    box-shadow: 0 0 16px 0px rgb(16, 201, 195);
+    background: #17f3ec;
+}
+.inp4 ~ div>button:active{
+    -webkit-box-shadow: inset 0 0 16px 0px rgb(16, 201, 195);
+    -o-box-shadow: inset 0 0 16px 0px rgb(16, 201, 195);
+    -moz-box-shadow: inset 0 0 16px 0px rgb(16, 201, 195);
+    -ms-box-shadow: inset 0 0 16px 0px rgb(16, 201, 195);
+    box-shadow: inset 0 0 16px 0px rgb(16, 201, 195);
+    background: rgb(16, 201, 195);
+}
+.obl2{
+    position: relative;
+    height: 50px;
+}
+
+.map{    
+    background-image:url('../image/map.PNG');    
+    background-position:50%;    
+    background-size:32em 13em;    
+    background-repeat:no-repeat;    
+    height:150px;    
+    width:100%;    
+    margin-top:7px;    
+    margin-bottom:7px;
+}
+
+/*Сдесь заканчивается основная часть
+сайта , и начинается футер*/
+.fot1{    
+    width:180px;
+}
+
+
+.fot1 h5{    
+    color:white;    
+    margin:0;
+}
+
+
+.fot1 p{    
+    margin:0;    
+    margin-top:15px;    
+    color:#bcbcbc;    
+    font-size:.7rem;    
+    line-height:20px;
+}
+
+
+.fot2{    
+    margin-top:20px;    
+    width:150px;
+}
+
+
+.fot2 p{    
+    margin:0;    
+    color:#bcbcbc;    
+    font-size:.7rem;    
+    line-height:20px;
+}
+
+
+.fot3{    
+    margin-top:15px;    
+    margin-left:41px;       
+    width:260px;    
+    margin-bottom:0;
+}
+
+
+._fot1  , ._fot2  , ._fot3{    
+    display:inline-block;    
+    margin-left:15px;
+}
+
+
+._fot1 p , ._fot2 p , ._fot3 p{    
+    margin:0;    
+    color:#bcbcbc;    
+    font-size:.7rem;    
+    line-height:20px;
+}
+/************Маленькие устройства***********/
+@media(min-width: 425px){
+    footer{
+        height: 220px;
+    }
+    .fot1{
+        margin-top: 12px;
+    }
+    .fot2{
+       
+        margin-top: -40px;
+        margin-left: auto;    
+    }
+    .fot3{
+        margin: auto;
+        margin-top: 22px;
+    }
+    .fot3 p{
+        margin-left: 6px;
+    }
+}
+/*************Маленькие телефоны**************/
+@media (min-width: 768px){
+    input{
+        -webkit-box-shadow: 0 -1px 24px -4px rgba(0,0,0,.3);
+        -o-box-shadow: 0 -1px 24px -4px rgba(0,0,0,.3);
+        -moz-box-shadow: 0 -1px 24px -4px rgba(0,0,0,.3);
+        -ms-box-shadow: 0 -1px 24px -4px rgba(0,0,0,.3);
+        box-shadow: 0 -1px 24px -4px rgba(0,0,0,.3);
+    }
+    .sec1{
+        width: 400px;
+        display: inline-block;
+    }
+    .sec2{
+        width: 360px;
+        display: inline-block;
+    }
+    .map{
+        background-position: 50%;
+    }
+}
+/*****************Планшеты******************/
+@media (min-width: 1024px){
+    main{
+        padding: 25px;
+        position: relative;
+    }
+    input{
+        -webkit-box-shadow: none;
+        -o-box-shadow: none;
+        -moz-box-shadow: none;
+        -ms-box-shadow: none;
+        box-shadow: none;
+    }
+    textarea{
+        -webkit-box-shadow: none;
+        -o-box-shadow: none;
+        -moz-box-shadow: none;
+        -ms-box-shadow: none;
+        box-shadow: none;
+        height: 150px;
+    }
+    header{
+        position: static;
+    }
+    footer{
+        position: relative;
+    }
+    .head{
+        position: relative;
+        height: 75px;
+        border: none;
+    }
+    .logo {
+        margin-left: 81px;
+        margin-top: 15px;
+        width: 3em;
+    }
+    .btn_head{
+        visibility: hidden;
+    }
+    .sec1{
+        margin-right: 65px;
+        position: absolute;
+    }
+    .CI{
+        margin-top: 16px;
+    }
+    .sec2 {
+        position: absolute;
+        top: 71px;
+        right: 50px;
+        width: 487px;
+    }
+    .sec3{
+        margin-top: 465px;
+    }
+    .inp1{
+        -webkit-box-shadow: none;
+        -o-box-shadow: none;
+        -moz-box-shadow: none;
+        -ms-box-shadow: none;
+        box-shadow: none;
+        width: 210px;
+    }
+    .inp2{
+        width: 210px;
+        display: inline-block;
+        margin-left: 53px;
+        margin-bottom: 10px;
+    }
+    .inp3{
+        margin-bottom: 10px;
+    }
+    .map{
+        height: 350px;
+        background-size: 80%;
+        margin: 37px 0;
+    }
+    .obl1{
+        display: inline-block;
+        position: absolute;
+        right: 298px;
+        top: -24px;
+    }
+
+    .head_menu {
+        width: 270px;
+        height: 20px;
+        visibility: visible;
+        position: absolute;
+    }
+
+    .head_menu a{  
+        width: 50px;
+        height: 25px;  
+        visibility: visible;
+        display: inline-block;
+        margin-left: 20px;
+    }
+
+    .head_menu div{ 
+        width: 50px;
+        height: 25px; 
+        visibility: visible;
+    }
+    .contact_blue{
+        color: #10c9c3;
+    }
+
+    .head_menu p{ 
+        width: 82px;
+        height: 25px;
+        visibility: visible;  
+        left: 0; 
+        margin: 0;
+        font-family:"Montserrat" , monospace , sans-serif;
+        
+    }
+    .inp4 ~ div>button{       
+        width:150px;    
+        height:50px;    
+        background-color:#10c9c3;    
+        font-size:13px;    
+        color:white;
+        position: absolute;
+        right: 0;
+        transition: .2s;
+        border: none;
+        box-shadow: none;
+    }
+    .inp4 ~ div>button:hover{
+        -webkit-box-shadow: 0 0 16px 0px rgb(16, 201, 195);
+        -o-box-shadow: 0 0 16px 0px rgb(16, 201, 195);
+        -moz-box-shadow: 0 0 16px 0px rgb(16, 201, 195);
+        -ms-box-shadow: 0 0 16px 0px rgb(16, 201, 195);
+        box-shadow: 0 0 16px 0px rgb(16, 201, 195);
+        transition: .2s;
+        background: #17f3ec;
+    }
+    .inp4 ~ div>button:active{
+        -webkit-box-shadow: inset 0 0 16px 0px rgb(16, 201, 195);
+        -o-box-shadow: inset 0 0 16px 0px rgb(16, 201, 195);
+        -moz-box-shadow: inset 0 0 16px 0px rgb(16, 201, 195);
+        -ms-box-shadow: inset 0 0 16px 0px rgb(16, 201, 195);
+        box-shadow: inset 0 0 16px 0px rgb(16, 201, 195);
+        background: rgb(16, 201, 195);
+    }
+    .fot1{
+        margin-left: 80px;
+        margin-top: 51px;
+    }
+    .fot2{
+        margin-right: auto;
+    }
+    .fot3{
+        position: absolute;
+        right: 72px;
+        top: 40px;
+        width: 280px;
+    }
+    ._fot3{
+        margin-left: 35px;
+    }
+}
+@media (min-width: 1440px){
+    .obl1{
+        right: 348px;
+    }
+    main{
+        padding: 60px 100px;
+    }
+    .CI{
+        font-size: 30px;
+    }
+    .sec2{
+        right: 100px;
+        width: 680px;
+    }
+    .sec3{
+        margin-top: 510px;
+    }
+    .inp1{
+        width: 326px;
+    }
+    .inp2{
+        width: 326px;
+        margin-left: 20px;
+    }
+    .inp3{
+        margin-top: 20px;
+    }
+    textarea{
+        margin-top: 20px;
+    }
+    .inp4 ~ div > button{
+        left: 0;
+        top: 10px;
+    }
+    .map{
+        background-size: 100%;
+    }
+}
+/*****************Ноутбуки*******************/
+@media (min-width: 2560px){
+    main{
+        width: 60%;
+        margin: auto;
+    }
+    main p{
+        font-size: 1.1rem;
+    }
+    input{
+        font-size: 1.1rem;
+    }
+    textarea{
+        font-size: 1.1rem;
+    }
+    input::placeholder{
+        font-size: 1.1rem;
+    }
+    textarea::placeholder{
+        font-size: 1.1rem;
+    }
+}
+/***************Большие мониторы**************/

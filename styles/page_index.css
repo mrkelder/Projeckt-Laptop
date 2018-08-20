@@ -1,0 +1,26 @@
+body{
+	background: black;
+}
+p{
+	color: white;
+	font-size: 65px;
+	font-family: monospace;
+}
+a{
+	color: white;
+	font-size: 65px;
+	font-family: monospace;
+	text-decoration: none;
+}
+.div1{
+	width: 370px;
+	margin: auto;
+	margin-top: 50px;
+}
+.img_gif{
+	width: 100%;
+}
+.div2{
+	margin: auto;
+	width: 90%;
+}
